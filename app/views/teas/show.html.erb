@@ -1,0 +1,69 @@
+<% provide(:title, @tea.name) %>
+
+<% @hehe="tea" %>
+
+
+<div id="tea" class="carousel slide" data-ride="carousel">
+
+<div class="col-md-6">
+
+  <ol class="carousel-indicators" id="c">
+    <li id="bbb" data-target="#tea" data-slide-to="0" class="active"></li>
+    <li  id="bbb" data-target="#tea" data-slide-to="1"></li>
+    <li  id="bbb" data-target="#tea" data-slide-to="2"></li>
+    <li  id="bbb" data-target="#tea" data-slide-to="3"></li>
+     <li  id="bbb" data-target="#tea" data-slide-to="4"></li>
+      <li  id="bbb" data-target="#tea" data-slide-to="5"></li>
+  </ol>
+
+    <div class="carousel-inner" id:"pictures">
+        <div class="item active">
+           <%= image_tag("tea/1.jpg", alt: "1",id:"p") %>
+        </div>
+        <div class="item">
+            <%= image_tag("tea/2.jpg", alt: "2",id:"p") %>
+        </div>
+        <div class="item" >
+            <%= image_tag("tea/3.jpg", alt: "3",id:"p") %>
+        </div>
+        <div class="item" >
+            <%= image_tag("tea/4.jpg", alt: "4",id:"p") %>
+        </div>
+        <div class="item" >
+            <%= image_tag("tea/5.jpg", alt: "5",id:"p") %>
+        </div>
+        <div class="item" >
+            <%= image_tag("tea/6.jpg", alt: "6",id:"p") %>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+
+<h1 id="title2"><%= @tea.name %></h1>
+
+<p>
+<%= @tea.describe %>
+</p>
+
+
+<div class="col-md-2 col-md-offset-8">
+<strong>¥ 15   </strong><%= @tea.price %><strong>RMB</strong>
+</div>
+
+<div class="col-md-2 col-md-offset-8">
+<%= link_to "买!", "#", class: "btn btn-default",  id:"regbutton2" %>
+</div>
+
+</div>
+</div>
+
+</div>
+<hr>

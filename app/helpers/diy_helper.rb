@@ -1,0 +1,2 @@
+module DiyHelper
+end

@@ -1,0 +1,8 @@
+<h1>Xiaos.</h1>
+<p>Hi <%= @user.name %>,</p>
+<p>
+欢迎来到 Xiaos! 点击链接以激活你的账户:
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
+</p>
+<%= link_to "激活", edit_account_activation_url(@user.activation_token,
+email: @user.email) %>

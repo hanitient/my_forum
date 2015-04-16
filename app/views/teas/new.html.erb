@@ -1,0 +1,32 @@
+<% provide(:title, '调制饮品') %>
+
+<h1>调制饮品</h1>
+
+<div class="row">
+
+<div class="col-md-6 col-md-offset-3">
+
+<%= form_for(@tea) do |f| %>
+<%= render 'shared/error_messages2' %>
+
+
+<%= f.label :name,"饮品名" %>
+<%= f.text_field :name ,class: 'form-control'%>
+
+<%= f.label :kind, "种类"%>
+ <%= f.select :kind,  ["茶","果汁","保健饮品"],class: "selectpicker" %>
+
+
+<%= f.label :describe ,"描述"%>
+<%= f.text_area :describe, class: 'form-control',id:"text1",placeholder:"输入饮品的描述" %>
+
+<%= f.label :price," 价格 (RMB¥)" %>
+<%= f.text_field :price ,class: 'form-control',placeholder:"请输入整数"%>
+
+<%= f.submit "上传", class: "btn btn-default" ,id:"regbutton2"%>
+<% end %>
+</div>
+
+
+
+</div>

@@ -1,0 +1,9 @@
+<% provide(:title, "欢迎来到Xiaos.") %>
+
+<%= render 'shared/pictures' %>
+
+<% unless logged_in? %>
+<div id="register">
+<%= link_to "现在注册!", signup_path, class: "btn ",  id:"regbutton" %>
+</div>
+<% end %>

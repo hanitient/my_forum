@@ -1,0 +1,23 @@
+
+<% @hehe="tea" %>
+<div class="container">
+    <div class="row">
+<div id="tea" class="carousel slide" data-ride="carousel">
+
+<div class="col-md-6">
+           <%= image_tag("tea/1.jpg", alt: "1",id:"p") %>
+</div>
+
+<div class="col-md-6">
+<h1 id="title2"><%= tea.name %></h1>
+</div>
+<p>
+<%= tea.describe %>
+</p>
+</div>
+<div class="col-md-2 col-md-offset-6">
+<%= link_to "看看", tea, class: "btn btn-default",  id:"regbutton2" %>
+</div>
+</div>
+</div>
+<hr>

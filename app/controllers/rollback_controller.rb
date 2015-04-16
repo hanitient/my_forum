@@ -1,0 +1,2 @@
+class RollbackController < ApplicationController
+end

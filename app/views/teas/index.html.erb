@@ -1,0 +1,10 @@
+
+<% provide(:title, '茶') %>
+<h1 class="glyphicon glyphicon-leaf">茶</h1>
+<hr>
+
+<%= will_paginate @posts, :previous_label =>'上一页' , :next_label => '下一页',:style => 'color:black' %>
+<ul class="users">
+<%= render @teas %>
+</ul>
+<%= will_paginate @posts, :previous_label =>'上一页' , :next_label => '下一页',:style => 'color:red' %>
