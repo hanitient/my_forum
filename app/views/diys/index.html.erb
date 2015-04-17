@@ -1,0 +1,20 @@
+<% provide(:title, '我的调制') %>
+<div class="container">
+<h1 class="glyphicon glyphicon-tint">我的调制</h1>
+<hr>
+
+<%= will_paginate @posts, :previous_label =>'上一页' , :next_label => '下一页',:style => 'color:black' %>
+<ul class="users">
+<%= render @diys %>
+</ul>
+<%= will_paginate @posts, :previous_label =>'上一页' , :next_label => '下一页',:style => 'color:red' %>
+</div>
+
+
+
+
+<div class="container">
+<div id="register">
+<%= link_to "开始调制!", adddiy_path, class: "btn ",  id:"regbutton" %>
+</div>
+</div>

@@ -21,7 +21,7 @@
 <%= f.text_area :describe, class: 'form-control',id:"text1",placeholder:"输入饮品的描述" %>
 
 <%= f.label :price," 价格 (RMB¥)" %>
-<%= f.text_field :price ,class: 'form-control',placeholder:"请输入整数"%>
+<%= f.number_field :price ,class: 'form-control',placeholder:"请输入整数"%>
 
 <%= f.submit "上传", class: "btn btn-default" ,id:"regbutton2"%>
 <% end %>

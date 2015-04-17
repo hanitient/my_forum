@@ -14,7 +14,13 @@
 <%= link_to "保健饮品", allhealths_path, class: "btn btn-default glyphicon glyphicon-heart",id:"b" %>
 </div>
 <div class="col-md-2 ">
+
+	<% if logged_in?&&have_diy? %>
+<%= link_to "自己调制", alldiys_path, class: "btn btn-default glyphicon glyphicon-tint",id:"b" %>
+<% else %>
 <%= link_to "自己调制", introdiy_path, class: "btn btn-default glyphicon glyphicon-tint",id:"b" %>
+<% end %>
+
 </div>
 
 </div>

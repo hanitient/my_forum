@@ -6,6 +6,19 @@
 
 <div class="col-md-6 col-md-offset-3">
 
+<%= form_for(@diy) do |f| %>
+<%= render "shared/error_messages3" %>
+
+<%= f.label :name,"自定义的饮品名" %>
+<%= f.text_field :name ,class: 'form-control'%>
+
+<%= f.label :describe,"描述" %>
+<%= f.text_area :describe ,class: 'form-control',placeholder:"描述想要的饮品外观、口味、功能、以及原料(茶？果汁？)"%>
+
+
+<%= f.submit "上传", class: "btn btn-default" ,id:"regbutton2"%>
+<% end %>
+
 
 </div>
 

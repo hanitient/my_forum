@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :password_resets,only: [:new, :create, :edit, :update]
 
 
+
   get'login'=> 'sessions#new'
   post'login'=> 'sessions#create'
   delete 'logout' => 'sessions#destroy'
@@ -24,6 +25,9 @@ Rails.application.routes.draw do
 
   get'introdiy' => 'diys#intro'
   get'adddiy' => 'diys#new'
+  post'adddiy' => 'diys#create'
+  get'alldiys' => 'diys#index'
+  resources :diys
   #get 'static_pages/contact'
   #get 'static_pages/login'
 

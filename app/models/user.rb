@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+   has_many :diys,dependent: :destroy
 
 	#创建一个可访问的令牌属性
 	attr_accessor :remember_token, :activation_token, :reset_token
