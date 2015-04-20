@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+<div id="tea" class="carousel slide" data-ride="carousel">
+
+<div class="col-md-6">
+           <%= image_tag("bottle_logo.png", alt: "bottle",id:"bottle") %>
+</div>
+
+<div class="col-md-6">
+<h1 id="title2"><%= order.name %></h1>
+</div>
+
+<%= order.kind %>
+
+<%= order.price %>
+
+<%= order.address %>
+
+<%= order.describe %>
+
+<%= order.user_id %>
+
+</div>
+
+<div class="col-md-2 col-md-offset-6">
+<%= link_to "买", order, class: "btn btn-default",  id:"regbutton2" %>
+</div>
+</div>
+</div>
+<hr>

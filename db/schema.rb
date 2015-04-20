@@ -11,13 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417123047) do
+ActiveRecord::Schema.define(version: 20150419053050) do
 
   create_table "diys", force: :cascade do |t|
     t.string   "name"
     t.text     "describe"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "name"
+    t.string   "kind"
+    t.string   "address"
+    t.integer  "price"
+    t.string   "describe"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "status"
     t.integer  "user_id"
   end
 
@@ -44,6 +56,8 @@ ActiveRecord::Schema.define(version: 20150417123047) do
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.string   "address1"
+    t.string   "address2"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    resources :teas
   root 'static_pages#home'
 
   get 'password_resets/new'
@@ -9,7 +10,9 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets,only: [:new, :create, :edit, :update]
 
-
+  resources :diys
+  resources :orders
+ 
 
   get'login'=> 'sessions#new'
   post'login'=> 'sessions#create'
@@ -21,13 +24,20 @@ Rails.application.routes.draw do
   get'allteas' => 'teas#index'
   get'alljuices' => 'teas#index2'
   get'allhealths' => 'teas#index3'
-  resources :teas
+
+  post'neworder'=> 'teas#new_order'
 
   get'introdiy' => 'diys#intro'
   get'adddiy' => 'diys#new'
   post'adddiy' => 'diys#create'
   get'alldiys' => 'diys#index'
-  resources :diys
+
+
+  get 'addorder'=>'orders#new'
+  post'addorder'=>'order#create'
+  get 'allorder'=>'orders#indexall'
+
+
   #get 'static_pages/contact'
   #get 'static_pages/login'
 

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
    has_many :diys,dependent: :destroy
+   has_many :orders,dependent: :destroy
 
 	#创建一个可访问的令牌属性
 	attr_accessor :remember_token, :activation_token, :reset_token
@@ -17,6 +18,8 @@ class User < ActiveRecord::Base
 	validates :email, presence: true, length: { maximum: 255 },
 	format: { with: VALID_EMAIL_REGEX },
     uniqueness: { case_sensitive: false }
+
+  validates :address1, presence: true
 
 
     #使密码转换成哈希值

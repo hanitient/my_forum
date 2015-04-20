@@ -67,7 +67,7 @@ class UsersController < ApplicationController
    #引入健壮参数以防止用户所有哈希数据都能被初始化修改
     def user_params
       params.require(:user).permit(:name, :email, :password,
-      :password_confirmation)
+      :password_confirmation,:address1,:address2)
     end
 
   #确保用户已经登录

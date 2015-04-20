@@ -11,6 +11,11 @@
 </a>
 <ul class="dropdown-menu">
 
+<% if admin? %>
+<li><%= link_to "客户订单", allorder_path %></li>
+<% end %>
+
+<li><%= link_to "我的订单", "#" %></li>
 <li><%= link_to "我的资料（开发）", current_user %></li>
 <li><%= link_to "设置（开发）", edit_user_path(current_user) %></li>
 <li><%= link_to "所有用户（开发）", users_path %></li>

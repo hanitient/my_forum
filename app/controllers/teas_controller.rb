@@ -1,4 +1,5 @@
 class TeasController < ApplicationController
+  $t1
 
   def new
   	@tea=Tea.new
@@ -15,6 +16,8 @@ class TeasController < ApplicationController
 
   def show
   @tea=Tea.find(params[:id])
+  @order =  current_user.orders.build(params[:order])
+  $t1=Tea.find(params[:id])
   end
 
   def index
@@ -33,6 +36,10 @@ class TeasController < ApplicationController
     Tea.find(params[:id]).destroy
     flash[:success] = "用户已删除！"
     redirect_to users_url
+  end
+
+  def new_order
+@tea=Tea.new
   end
 
   private 

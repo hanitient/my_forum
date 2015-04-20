@@ -1,0 +1,25 @@
+<% provide(:title, '新建订单') %>
+
+<h1 class="glyphicon glyphicon-tint">新建订单</h1>
+
+<div class="row">
+
+<div class="col-md-6 col-md-offset-3">
+
+<%= form_for(@order) do |f| %>
+<%= render "shared/error_message0" %>
+<%=hidden_field_tag :name, "params[:name]"%>
+<%=hidden_field_tag :kind, params[:kind] %>
+<%=hidden_field_tag :price, params[:price] %>
+<%=hidden_field_tag :address, params[:address] %>
+<%=hidden_field_tag :describe, params[:describe] %>
+<%=hidden_field_tag :user_id, "params[:user_id] "%> 
+<%= f.submit "xx", class: "btn btn-default" ,id:"regbutton2"%>
+<% end %>
+
+
+</div>
+
+
+
+</div>

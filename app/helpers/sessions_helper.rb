@@ -5,7 +5,6 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
-  
   #获得当前用户
   def current_user
     if (user_id = session[:user_id])
@@ -59,6 +58,10 @@ module SessionsHelper
     user.remember
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
+  end
+
+  def admin?
+    current_user.admin?
   end
   
 end

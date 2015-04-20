@@ -8,8 +8,16 @@
 <%= f.label :name,"用户名"%>
 <%= f.text_field :name, class: 'form-control' %>
 
+<!--
 <%= f.label :email,"邮箱"%>
 <%= f.text_field :email, class: 'form-control' %>
+-->
+
+<%= f.label :address1, "收货地址"%>
+<%= f.text_field :address1 , class: 'form-control',placeholder:"请填写正确的地址以便于快递收货"%>
+
+<%= f.label :address2, "备选收货地址（可选）"%>
+<%= f.text_field :address2 , class: 'form-control'%>
 
 <%= f.label :password ,"密码"%>
 <%= f.password_field :password, class: 'form-control' %>
